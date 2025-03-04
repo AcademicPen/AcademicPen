@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Pen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Header-->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo (Image) -->
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="ProWriters" class="header-logo">
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HowItWorks.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Pricing.html">Pricing</a></li>
+                </ul>
+
+                <!-- Buttons: Login & Order Now -->
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="orderform.html" class="btn btn-warning text-dark">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+     <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Side: Text & CTA -->
+                <div class="col-md-6">
+                    <h1 class="hero-title">
+                        Hire an academic and productive expert writer <br>
+                        and get discounted rates for your assignments.
+                    </h1>
+                    <p class="hero-subtext">
+                        Get your essay written starting at just <strong>$15</strong> a page
+                    </p>
+                    <a href="orderform.html" class="btn btn-warning btn-lg hero-btn">WRITE MY PAPER </a>
+
+                    <!-- Ratings -->
+                     <div class="ratings">
+                        <span>⭐ Avg Rating <strong>4.7</strong></span>
+                        <span>⭐ Trustpilot <strong>4.5</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-quote">
+                <h3 class="quote-title">QUICK QUOTE</h3>
+            
+                <label for="academic-level">Academic Level</label>
+                <select id="academic-level" class="quote-input">
+                    <option>High School</option>
+                    <option>College</option>
+                    <option>University</option>
+                    <option>Masters</option>
+                </select>
+            
+                <label for="paper-type">Type of Paper</label>
+                <select id="paper-type" class="quote-input">
+                    <option>Essay (Any Type)</option>
+                    <option>Research Paper</option>
+                    <option>Case Study</option>
+                    <option>Term Paper</option>
+                </select>
+            
+                <label for="pages">Number of Pages</label>
+                <div class="page-selector">
+                    <button class="page-btn">-</button>
+                    <input type="number" id="pages" class="quote-input pages" value="1" min="1">
+                    <button class="page-btn">+</button>
+                </div>
+                <p class="word-count">Approximately 250 words</p>
+            
+                <label for="urgency">Urgency</label>
+                <select id="urgency" class="quote-input">
+                    <option>12 Hours</option>
+                    <option>24 Hours</option>
+                    <option>3 Days</option>
+                    <option>1 Week</option>
+                </select>
+            
+                <div class="quote-footer">
+                    <span class="quote-price">$15</span>
+                    <button class="order-btn">ORDER NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper Types Section -->
+    <section class="ratings-section">
+        <div class="container text-center">
+            <h2>Reviews, comments and love from our customers and community</h2>
+            <div class="ratings d-flex justify-content-center">
+                <div class="rating-item">
+                    <i class="fas fa-user-graduate"></i> Avg Rating <strong>4.7</strong>
+                </div>
+                <div class="rating-item">
+                    <i class="fas fa-star text-success"></i> Trustpilot <strong>4.5</strong>
+                </div>
+                <div class="rating-item">
+                    <i class="fas fa-star text-success"></i> Trustpilot <strong>4.5</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find the Cost of Your Essay -->
+    <section class="cost-section">
+        <div class="container text-center">
+            <h2>Find the Cost of Your Essay</h2>
+            <div class="payment-icons">
+                <img src="remitly-logo.png" alt="Remitly">
+                <img src="paypal-logo.png" alt="PayPal">
+            </div>
+            <a href="Pricing.html" class="btn btn-warning cost-btn">SEE PRICES FROM OUR WRITERS</a>
+        </div>
+    </section>
+
+     <!-- What's Included Section -->
+      <section class="whats-included">
+        <div class="container text-center">
+            <h2>What’s included?</h2>
+            <p>Check out our custom essay writing service features...</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="satisfaction.png" alt="Satisfaction">
+                        <h3>100% Satisfaction Guarantee</h3>
+                        <p>Our writers will work with you until you are satisfied with the final product.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="quick-results.png" alt="Quick Results">
+                        <h3>Quick Results</h3>
+                        <p>Meet any deadline. 450 dedicated writers are ready to help you.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="support.png" alt="Support">
+                        <h3>24/7 Unlimited Support</h3>
+                        <p>We’re always there for you. Contact us anytime for any questions or concerns.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-card">
+                        <img src="double-check.png" alt="Double Checked">
+                        <h3>All papers double-checked</h3>
+                        <p>First we check the web, then our database of completed orders to ensure originality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- We Handle All Writing Assignments Section -->
+     <section class="writing-assignments">
+        <div class="container text-center">
+            <h2>We Handle All Writing Assignments For Any Type Of Paper, Including:</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#">Essay (Any Type)</a></li>
+                        <li><a href="#">Assignment</a></li>
+                        <li><a href="#">Research Paper</a></li>
+                        <li><a href="#">Book/Movie Review</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#">Scholarship Essay</a></li>
+                        <li><a href="#">Admission Essay</a></li>
+                        <li><a href="#">Case Study</a></li>
+                        <li><a href="#">Coursework</a></li>
+                        <li><a href="#">Presentation</a></li>
+                    <ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#">Term Paper</a></li>
+                        <li><a href="#">Research Proposal</a></li>
+                        <li><a href="#">Speech</a></li>
+                        <li><a href="#">Capstone Project</a></li>
+                        <li><a href="#">Annotated Bibliography</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section-->
+     <section class="why-choose-us">
+        <div class="container text-center">
+            <h2>Why Choose Us?</h2>
+            <div class = "row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Overwhelmed with tons of routine tasks and educational assignments?</li>
+                        <li>Worried about making sure the work is 100% plagiarism-free?</li>
+                        <li>Stuck with a lot of homework assignments and test preps to be done this week?</li>
+                        <li>Afraid that your academic inquiry will be ignored or missed within a tight deadline?</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>Depressed while trying to increase your school, college or university grade point average?</li>
+                        <li>Unsure about where to find high-quality essays done exactly for your particular institution?</li>
+                        <li>Concerned about ordering papers for reasonable prices, which are unique and free of grammar mistakes?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Term Papers Section -->
+    <section class="term-papers">
+        <div class="container">
+            <h2 class="term-title">WE WRITE TERM PAPERS LIKE A GURU, CHARGE LIKE A BIRD</h2>
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-md-6">
+                    <h4>📝When the End of the Semester Approaches</h4>
+                    <p> When the end of each semester approaches, students often find themselves in a stressful situation: numerous deadlines, overlapping assignments, and an overwhelming workload. Among the most challenging tasks is completing term papers—a crucial component of academic performance. Unfortunately, many students underestimate the time and effort needed to complete a well-researched and properly formatted paper.
+                        
+                        Some procrastinate until the last moment, only to realize they lack the necessary time for thorough research and writing. Others juggle multiple assignments and struggle to meet their professors' expectations. This common academic challenge has led many students to seek professional assistance.
+                        
+                        The best solution? Ordering a high-quality, plagiarism-free, and well-researched term paper from experts. That’s where we come in.</p>
+                    
+                    <h4>🛤️ ALL ROADS LEAD TO US</h4>
+                    <p>Some students attempt to handle all their assignments independently, believing they can manage their workload effectively. While this determination is commendable, the reality is often different:
+                        ✔ Late nights and stress—leading to burnout and decreased productivity.
+                        ✔ Missed deadlines—which can significantly affect academic performance.
+                        ✔ Lack of proper research—resulting in poor-quality work and lower grades.
+                        
+                        Some even resort to downloading pre-written essays online, unaware of the risks involved, including plagiarism detection and academic penalties. Others rely on friends, only to receive poorly written or incomplete work.
+                        
+                        At our service, we provide an efficient, reliable, and professional solution—expert writers who craft customized term papers tailored to your academic needs.
+                        
+                        Whether you’re short on time or struggling with complex topics, we ensure that every student has access to high-quality academic assistance without the stress.</p>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="col-md-6">
+                    <h4>💰 QUALITY AND PRICES – The Best of Both Worlds</h4>
+                    <p>When it comes to academic writing, quality and affordability should go hand in hand. We understand that students often work within a budget, which is why we offer:
+
+                        ✅ Affordable Pricing – Get high-quality term papers at student-friendly rates without compromising on excellence.
+                        ✅ No Hidden Fees – Transparent pricing with no extra charges. What you see is what you pay.
+                        ✅ Free Revisions – If you need adjustments, we’re happy to revise your paper to meet your expectations.
+                        ✅ Money-Back Guarantee – Your satisfaction is our priority. If you’re not happy with the result, we’ll refund your money.
+                        
+                        We don’t believe in sacrificing accuracy, originality, or research depth for lower costs. With our service, you get high-quality writing at a price that works for you.</p>
+                    
+                    <h4>✍️ EXPERT WRITING SERVICE – Professionalism at Its Best</h4>
+                    <p>Why struggle with sleepless nights and tight deadlines when you can rely on professional academic writers? Our expert writing service offers:
+
+                        🎓 Highly Qualified Writers – Our team consists of PhD and Master’s degree holders in various fields.
+                        📚 In-Depth Research – We conduct comprehensive research using academic sources, ensuring originality and credibility.
+                        📑 Customized Papers – Every order is tailored to your specific requirements, following the correct academic format (APA, MLA, Chicago, etc.).
+                        🔍 Plagiarism-Free Guarantee – Every paper is 100% original, checked using advanced plagiarism detection tools.
+                        
+                        Our goal is to help students succeed by providing well-researched, polished, and properly formatted term papers that meet their academic requirements.</p>
+                    
+                    <h4>📝 ORDER YOUR CHEAP TERM PAPER ONLINE – Fast, Simple & Secure</h4>
+                    <p>Have you ever struggled with a term paper and wished there was a fast and easy way to get it done? Our service makes the process seamless:
+
+                        1️⃣ Submit Your Requirements – Fill out a simple form, specifying your topic, academic level, number of pages, and deadline.
+                        2️⃣ Select a Writer – Choose from our expert writers based on their skills and customer reviews.
+                        3️⃣ Receive Your Paper – Get a high-quality, plagiarism-free paper before your deadline.
+                        4️⃣ Request Revisions (If Needed) – Need modifications? We offer unlimited free revisions until you’re satisfied.
+                        
+                        ⏳ Why waste time stressing over deadlines? Order today and let professionals handle your academic needs while you focus on other priorities!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-4">
+                    <h5>DISCLAIMER</h5>
+                    <p>Academic Pen – A premier professional writing service delivering 100% original, high-quality papers tailored to your needs. 
+                        From essays to research papers, our expert writers ensure excellence, originality, and timely delivery. 🚀💯</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5>QUICK</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Useful Menu -->
+                <div class="col-md-2">
+                    <h5>Copyright @ AcademicPen 2025</h5>
+                    <ul>
+                        <li><a href="#">Academic Home</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="col-md-4">
+                    <h5>CONTACT US</h5>
+                    <div class="social-icons">
+                        <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="tiktok.png" alt="TikTok"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/7b1fbf7d4f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+           
+
+

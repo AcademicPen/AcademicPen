@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WriterConnect Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section - Login Form -->
+        <div class="login-section">
+            <div class="login-box">
+                <h2>Welcome to WriterConnect</h2>
+                <div class="tabs">
+                    <button class="tab active" onclick="showLogin()">Login</button>
+                    <button class="tab" onclick="showRegister()">Register</button>
+                </div>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Section - Image and Text -->
+        <div class="info-section">
+            <h2>Connect with Professional Writers</h2>
+            <p>Join our platform to connect with professional writers or find writing opportunities. 
+                Manage tasks, submissions, and payments all in one place.</p>
+            <div class="images">
+                <img src="Writtingonlaptop.jpeg" alt="Writing on Laptop">
+                <img src="Typinghands.jpeg" alt="Typing Hands">
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

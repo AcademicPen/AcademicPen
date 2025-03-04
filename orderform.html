@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="orderform.css">
+</head>
+<body>
+    
+
+    <div class="order-container">
+        <h2>PLACE AN ORDER</h2>
+        <p>Fill out the details below</p>
+
+        <!-- WhatsApp Button -->
+        <button id="whatsappBtn" class="whatsapp-btn" type="button">
+            <img src="whatsapp-icon.png" alt="WhatsApp"> Contact Us on WhatsApp
+        </button>
+
+        <form>
+            <!-- Type of Paper -->
+            <label>Type of Paper:</label>
+            <select>
+                <option>Essay (Any)</option>
+                <option>Research Paper</option>
+                <option>Case Study</option>
+                <option>Thesis</option>
+            </select>
+
+            <!-- Academic Level -->
+            <label>Academic Level:</label>
+            <div class="academic-level">
+                <button type="button">High School</button>
+                <button type="button">PhD</button>
+                <button type="button" class="active">College</button>
+                <button type="button">Masters</button>
+            </div>
+
+            <!-- Subject & Title -->
+            <label>Subject:</label>
+            <input type="text" placeholder="Enter subject">
+            
+            <label>Title:</label>
+            <input type="text" placeholder="Enter title">
+
+            <!-- Instructions -->
+            <label>Instructions:</label>
+            <textarea placeholder="Enter instructions"></textarea>
+
+            <!-- File Upload -->
+            <label>Upload File:</label>
+            <div class="file-upload">
+                <button type="button">Browse File</button>
+                <span>or Drag File here</span>
+            </div>
+
+            <!-- Paper Format -->
+            <label>Paper Format:</label>
+            <div class="paper-format">
+                <button type="button" class="active">MLA</button>
+                <button type="button">APA</button>
+                <button type="button">Harvard</button>
+                <button type="button">Chicago</button>
+            </div>
+
+            <!-- Fixed Number of Pages Counter -->
+            <label>Number of Pages:</label>
+            <div class="counter">
+                <button type="button">-</button>
+                <span>1</span>
+                <button type="button">+</button>
+            </div>
+
+            <!-- Currency Selection -->
+            <label>Currency:</label>
+            <div class="currency">
+                <button type="button" class="active">USD</button>
+                <button type="button">GBP</button>
+                <button type="button">EUR</button>
+                <button type="button">AUD</button>
+            </div>
+
+            <!-- Discount Code -->
+            <label>Discount Code:</label>
+            <div class="discount">
+                <input type="text" placeholder="Enter code">
+                <button type="button">Apply</button>
+            </div>
+
+            <!-- Sources, Slides, Charts -->
+            <label>Number of Sources:</label>
+            <input type="number" min="0" value="0">
+
+            <label>PowerPoint Slides:</label>
+            <input type="number" min="0" value="0">
+
+            <label>Charts:</label>
+            <input type="number" min="0" value="0">
+
+            <!-- Deadline Selection -->
+            <label>Deadline:</label>
+            <div class="deadline">
+                <button type="button" class="active">12 Hours</button>
+                <button type="button">1 Day</button>
+                <button type="button">3 Days</button>
+                <button type="button">5 Days</button>
+            </div>
+
+            <!-- Category Selection -->
+            <label>Category:</label>
+            <div class="category">
+                <button type="button" class="active">Standard</button>
+                <button type="button">Premium</button>
+                <button type="button">Platinum</button>
+            </div>
+
+            <!-- Additional Services -->
+            <label>Additional Services:</label>
+            <div class="additional-services">
+                <label><input type="checkbox"> VIP Support ($5)</label>
+                <label><input type="checkbox"> Draft/Outline ($15)</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button id="submitOrder" class="submit-btn" type="submit">Submit Order</button>
+        </form>
+
+        <!-- Sign Up/Login -->
+        <h3>Sign up/Login</h3>
+        <div class="signup">
+            <label>Email Address:</label>
+            <input type="email" placeholder="Your email">
+            
+            <label>Full Name:</label>
+            <input type="text" placeholder="Your full name">
+            
+            <label>Password:</label>
+            <input type="password" placeholder="Enter password">
+
+            <label>Phone:</label>
+            <input type="tel" placeholder="Phone number">
+            
+            <button class="signup-btn" type="button">Sign Up</button>
+        </div>
+
+    </div>
+
+    <!-- Required Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="order.js"></script>
+
+</body>
+</html>
