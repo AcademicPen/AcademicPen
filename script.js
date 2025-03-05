@@ -14,19 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Pricing variables
     const basePricePerPage = {
-        "High School": 10,
+        "High School": 15,
         "College": 15,
         "University": 15,
         "Masters": 15,
-        "PhD": 20
+        "PhD": 15
     };
 
     const deadlineMultiplier = {
-        "12 Hours": 2.5,
-        "24 Hours": 2.2,
-        "3 Days": 1.5,
+        "12 Hours": 1.0,
+        "24 Hours": 1.0,
+        "3 Days": 1.0,
         "1 Week": 1.0,
-        "2 Weeks": 0.8
+        "2 Weeks": 1.0
     };
 
     // Function to calculate price
