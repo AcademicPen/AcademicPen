@@ -13,10 +13,11 @@
         <h2>PLACE AN ORDER</h2>
         <p>Fill out the details below</p>
 
-        <!-- WhatsApp Button -->
-        <button id="whatsappBtn" class="whatsapp-btn" type="button">
-            <img src="whatsapp-icon.png" alt="WhatsApp"> Contact Us on WhatsApp
-        </button>
+        <div class="whatsapp-container">
+            <button id="whatsappBtn" class="whatsapp-btn" type="button">
+                <img src="whatsapp-icon.png" alt="WhatsApp"> Contact Us on WhatsApp
+            </button>
+        </div>
 
         <form>
             <!-- Type of Paper -->
@@ -66,11 +67,19 @@
 
             <!-- Fixed Number of Pages Counter -->
             <label>Number of Pages:</label>
-            <div class="counter">
-                <button type="button">-</button>
-                <span>1</span>
-                <button type="button">+</button>
+            <div class ="counter-container">
+                <div class="counter">
+                    <button type="button">-</button>
+                    <span>1</span>
+                    <button type="button">+</button>
+                </div>
+
+                <div class ="price-info">
+                    <p>Total:$<span id="totalPrice">15</span></p>
+                    <p>Deposit:$<span id="totalPrice">5</span></p>
+                </div>
             </div>
+              
 
             <!-- Currency Selection -->
             <label>Currency:</label>
