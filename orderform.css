@@ -163,29 +163,31 @@ h2, h3 {
     color: #f5f5f5;
 }
 
-/* WhatsApp Button */
 .whatsapp-btn {
-    background-color: #25D366;
-    color: white;
+    background-color: #25D366; /* WhatsApp green */
     border: none;
+    border-radius: 50px; /* Makes it rounded */
     padding: 10px;
-    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    font-weight: bold;
+    justify-content: center;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background-color: #1eb14c;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .whatsapp-btn img {
-    width: 20px;
-    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.1); /* Slightly enlarges the button */
+}
+
+.whatsapp-btn:active {
+    transform: scale(0.95); /* Slight click effect */
 }
 
 /* Labels & Inputs */
@@ -362,5 +364,90 @@ button.active {
     .left-column, .right-column {
         width: 100%;
         margin-bottom: 20px;
+    }
+}
+
+/* Counter Container */
+.counter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* Counter Section */
+.counter {
+    display: flex;
+    align-items: center;
+    background: #2a2a2a;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Counter Buttons */
+.counter button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.counter button:hover {
+    background: #00bcd4;
+    color: #111;
+    transform: scale(1.1);
+}
+
+/* Counter Value */
+.counter span {
+    margin: 0 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0ff;
+}
+
+/* Price Info Section */
+.price-info {
+    text-align: right;
+    font-size: 16px;
+}
+
+.price-info p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.price-info span {
+    color: #ff007f;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .counter-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .counter {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .price-info {
+        text-align: center;
     }
 }
