@@ -51,8 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Page counter with proper increment/decrement
+    // Pricing Logic
+    const basePrice = 15; // Price per page
+    const depositPercentage = 0.33; // 33% of total price
+
+    // Page Counter and Price Calculation
     const pageCounter = document.querySelector('.counter span');
+    const totalPriceElement = document.getElementById('totalPrice');
+    const depositPriceElement = document.querySelector('.price-info p:nth-child(2) span');
+
     document.querySelector('.counter').addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
             let count = parseInt(pageCounter.textContent) || 1;
@@ -62,6 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 count = Math.max(1, count - 1);
             }
             pageCounter.textContent = count;
+
+            // Update Pricing
+            const total = count * basePrice;
+            const deposit = Math.ceil(total * depositPercentage);
+            totalPriceElement.textContent = total;
+            depositPriceElement.textContent = deposit;
         }
     });
 
@@ -84,56 +97,39 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('submitOrder').addEventListener('click', async (e) => {
         e.preventDefault();
 
-        // Collect all form data
+        // Collect form data
         const formData = {
             'Type of Paper': document.querySelector('select').value,
-            'Academic Level': document.querySelector('.academic-level .active').textContent,
+            'Academic Level': document.querySelector('.academic-level .active')?.textContent || 'Not selected',
             'Subject': document.querySelector('input[placeholder="Enter subject"]').value,
             'Title': document.querySelector('input[placeholder="Enter title"]').value,
             'Instructions': document.querySelector('textarea').value,
-            'Paper Format': document.querySelector('.paper-format .active').textContent,
-            'Number of Pages': document.querySelector('.counter span').textContent,
-            'Currency': document.querySelector('.currency .active').textContent,
-            'Deadline': document.querySelector('.deadline .active').textContent,
-            'Category': document.querySelector('.category .active').textContent,
+            'Paper Format': document.querySelector('.paper-format .active')?.textContent || 'Not selected',
+            'Number of Pages': pageCounter.textContent,
+            'Total Price': `$${totalPriceElement.textContent}`,
+            'Deposit Required': `$${depositPriceElement.textContent}`,
+            'Currency': document.querySelector('.currency .active')?.textContent || 'USD',
+            'Deadline': document.querySelector('.deadline .active')?.textContent || 'Not selected',
+            'Category': document.querySelector('.category .active')?.textContent || 'Not selected',
             'Additional Services': Array.from(document.querySelectorAll('.additional-services input:checked'))
-                                   .map(checkbox => checkbox.parentElement.textContent.trim()).join(', ')
+                .map(checkbox => checkbox.parentElement.textContent.trim()).join(', ') || 'None'
         };
 
-        // Create PDF
-        const doc = new jspdf.jsPDF();
-        let yPos = 20;
-        
+        // Format WhatsApp Message
+        let message = `📄 *New Order Submission*\n\n`;
         Object.entries(formData).forEach(([key, value]) => {
-            if (value) {
-                doc.text(`${key}: ${value}`, 20, yPos);
-                yPos += 10;
-            }
+            message += `🔹 *${key}*: ${value}\n`;
         });
 
-        // Save PDF
-        const pdfBlob = doc.output('blob');
-        const pdfUrl = URL.createObjectURL(pdfBlob);
+        message += `\n✅ *Please review and confirm your order!*`;
 
-        // Prepare WhatsApp message
-        const message = `New Order Submission\n*Please find attached order details*`;
-        const whatsappUrl = `https://web.whatsapp.com/send?phone=254743144115&text=${encodeURIComponent(message)}`;
+        // Encode for WhatsApp
+        const phone = "254743144115";
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
 
-        // Open WhatsApp Web
-        const whatsappWindow = window.open(whatsappUrl, '_blank');
-        
-        // Automatically download PDF
-        const downloadLink = document.createElement('a');
-        downloadLink.href = pdfUrl;
-        downloadLink.download = 'order-details.pdf';
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-
-        // Show attachment reminder after short delay
-        setTimeout(() => {
-            alert('Please attach the downloaded PDF file in WhatsApp Web:\n1. Click the paperclip icon\n2. Select "Document"\n3. Choose the downloaded "order-details.pdf" file\n4. Press send');
-        }, 3000);
+        // Open WhatsApp (Mobile Friendly)
+        window.open(whatsappUrl, '_blank');
     });
 
     // Signup button handler
